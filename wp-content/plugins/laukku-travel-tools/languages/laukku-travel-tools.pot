@@ -1,0 +1,433 @@
+# Copyright (C) 2026 Oba Oriekwo
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Laukku Travel Tools 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/laukku-travel-tools\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-06T04:07:20+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: laukku-travel-tools\n"
+
+#. Plugin Name of the plugin
+#: laukku-travel-tools.php
+msgid "Laukku Travel Tools"
+msgstr ""
+
+#. Description of the plugin
+#: laukku-travel-tools.php
+msgid "Luggage-specific features for a WooCommerce bag & luggage store: cabin-size checker per airline, \"will it fit?\" product finder, free-shipping progress bar, richer product structured data and a catalogue quality audit (admin page + WP-CLI)."
+msgstr ""
+
+#. Author of the plugin
+#: laukku-travel-tools.php
+msgid "Oba Oriekwo"
+msgstr ""
+
+#: includes/class-cabin-checker.php:60
+msgid "under-seat bag (free)"
+msgstr ""
+
+#: includes/class-cabin-checker.php:61
+msgid "cabin bag"
+msgstr ""
+
+#: includes/class-cabin-checker.php:161
+msgid "Cabin size"
+msgstr ""
+
+#. translators: %s: comma separated airline names.
+#: includes/class-cabin-checker.php:194
+#, php-format
+msgid "Fits as cabin bag: %s"
+msgstr ""
+
+#: includes/class-cabin-checker.php:197
+msgid "Check-in size – too big for most cabin limits"
+msgstr ""
+
+#. translators: %s: bag dimensions.
+#: includes/class-cabin-checker.php:204
+#, php-format
+msgid "Bag size: %s (incl. wheels and handles)"
+msgstr ""
+
+#: includes/class-cabin-checker.php:208
+msgid "Airline hand-luggage size limits compared with this bag"
+msgstr ""
+
+#: includes/class-cabin-checker.php:211
+msgid "Airline"
+msgstr ""
+
+#: includes/class-cabin-checker.php:212
+msgid "Limit"
+msgstr ""
+
+#: includes/class-cabin-checker.php:213
+msgid "Fits?"
+msgstr ""
+
+#: includes/class-cabin-checker.php:224
+msgid "Yes"
+msgstr ""
+
+#: includes/class-cabin-checker.php:226
+msgid "No"
+msgstr ""
+
+#: includes/class-cabin-checker.php:234
+msgid "Airlines change their rules and fares differ – always confirm with your airline before flying."
+msgstr ""
+
+#: includes/class-cabin-checker.php:236
+msgid "Find more bags that fit"
+msgstr ""
+
+#: includes/class-cabin-checker.php:275
+msgid "Will it fit on the plane?"
+msgstr ""
+
+#: includes/class-cabin-checker.php:277
+msgid "Choose airline and ticket type"
+msgstr ""
+
+#: includes/class-cabin-checker.php:279
+msgid "— Select —"
+msgstr ""
+
+#: includes/class-cabin-checker.php:288
+msgid "…or enter your own size limit (cm)"
+msgstr ""
+
+#: includes/class-cabin-checker.php:291
+msgid "Length"
+msgstr ""
+
+#: includes/class-cabin-checker.php:292
+msgid "Width"
+msgstr ""
+
+#: includes/class-cabin-checker.php:293
+msgid "Height"
+msgstr ""
+
+#: includes/class-cabin-checker.php:303
+msgid "Show bags that fit"
+msgstr ""
+
+#. translators: %s: dimensions.
+#: includes/class-cabin-checker.php:321
+#, php-format
+msgid "Bags that fit inside %s"
+msgstr ""
+
+#. translators: 1: airline name, 2: bag type.
+#: includes/class-cabin-checker.php:340
+#, php-format
+msgid "Bags that fit %1$s as %2$s"
+msgstr ""
+
+#: includes/class-cabin-checker.php:346
+msgid "No bags found for that size. Try a larger limit or a different ticket type."
+msgstr ""
+
+#. translators: %s: amount of money still needed.
+#: includes/class-free-shipping-bar.php:97
+#, php-format
+msgid "Add %s more to get free delivery!"
+msgstr ""
+
+#: includes/class-free-shipping-bar.php:101
+msgid "Your order ships for free!"
+msgstr ""
+
+#: includes/class-free-shipping-bar.php:114
+msgid "Progress towards free delivery"
+msgstr ""
+
+#: includes/class-luggage-fields.php:41
+#: includes/class-luggage-fields.php:50
+msgid "— Not specified —"
+msgstr ""
+
+#: includes/class-luggage-fields.php:42
+msgid "Hard shell"
+msgstr ""
+
+#: includes/class-luggage-fields.php:43
+msgid "Soft shell (fabric)"
+msgstr ""
+
+#: includes/class-luggage-fields.php:51
+msgid "No wheels"
+msgstr ""
+
+#: includes/class-luggage-fields.php:52
+msgid "2 wheels"
+msgstr ""
+
+#: includes/class-luggage-fields.php:53
+msgid "4 spinner wheels"
+msgstr ""
+
+#: includes/class-luggage-fields.php:59
+msgid "Luggage"
+msgstr ""
+
+#: includes/class-luggage-fields.php:74
+msgid "Volume (litres)"
+msgstr ""
+
+#: includes/class-luggage-fields.php:81
+msgid "Shown on product cards and in structured data."
+msgstr ""
+
+#: includes/class-luggage-fields.php:88
+#: includes/class-luggage-fields.php:205
+msgid "Wheels"
+msgstr ""
+
+#: includes/class-luggage-fields.php:96
+#: includes/class-luggage-fields.php:213
+msgid "Shell type"
+msgstr ""
+
+#: includes/class-luggage-fields.php:104
+msgid "Warranty (years)"
+msgstr ""
+
+#: includes/class-luggage-fields.php:114
+msgid "Tip: fill in length, width and height on the Shipping tab – the cabin-size checker uses them."
+msgstr ""
+
+#. translators: %s: dimensions joined with a multiplication sign.
+#: includes/class-luggage-fields.php:155
+#, php-format
+msgid "%s cm"
+msgstr ""
+
+#. translators: %s: volume in litres.
+#: includes/class-luggage-fields.php:168
+#: includes/class-luggage-fields.php:198
+#, php-format
+msgid "%s L"
+msgstr ""
+
+#. translators: %d: number of wheels.
+#: includes/class-luggage-fields.php:173
+#, php-format
+msgid "%d wheel"
+msgid_plural "%d wheels"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-luggage-fields.php:196
+msgid "Volume"
+msgstr ""
+
+#: includes/class-luggage-fields.php:220
+msgid "Warranty"
+msgstr ""
+
+#. translators: %d: number of years.
+#: includes/class-luggage-fields.php:222
+#, php-format
+msgid "%d year"
+msgid_plural "%d years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-settings.php:24
+#: includes/class-settings.php:43
+msgid "Travel tools"
+msgstr ""
+
+#: includes/class-settings.php:45
+msgid "Luggage-store features from the Laukku Travel Tools plugin."
+msgstr ""
+
+#: includes/class-settings.php:49
+msgid "Cabin-size badge"
+msgstr ""
+
+#: includes/class-settings.php:50
+msgid "Show a \"Cabin size\" badge on product cards"
+msgstr ""
+
+#: includes/class-settings.php:56
+msgid "Check cabin size for"
+msgstr ""
+
+#: includes/class-settings.php:57
+msgid "Categories that contain bags. Leave empty to check every product that has dimensions."
+msgstr ""
+
+#: includes/class-settings.php:66
+msgid "Finder page"
+msgstr ""
+
+#: includes/class-settings.php:67
+msgid "Page that contains the [laukku_cabin_finder] shortcode. Linked from product pages."
+msgstr ""
+
+#: includes/class-settings.php:72
+msgid "— None —"
+msgstr ""
+
+#: includes/class-settings.php:75
+msgid "Free-shipping progress bar"
+msgstr ""
+
+#: includes/class-settings.php:76
+msgid "Show in cart, mini-cart and checkout"
+msgstr ""
+
+#: includes/class-settings.php:82
+msgid "Fallback threshold (€)"
+msgstr ""
+
+#: includes/class-settings.php:83
+msgid "Used only if no Free shipping method with a minimum amount is configured."
+msgstr ""
+
+#: includes/class-settings.php:94
+msgid "Return window (days)"
+msgstr ""
+
+#: includes/class-settings.php:95
+msgid "Added to product structured data as a MerchantReturnPolicy. 0 = disabled."
+msgstr ""
+
+#: includes/class-store-audit.php:31
+msgid "No product image"
+msgstr ""
+
+#: includes/class-store-audit.php:32
+msgid "No price – product cannot be bought"
+msgstr ""
+
+#: includes/class-store-audit.php:33
+msgid "Sale price is not lower than regular price"
+msgstr ""
+
+#: includes/class-store-audit.php:34
+msgid "Size in title and in URL disagree"
+msgstr ""
+
+#: includes/class-store-audit.php:35
+msgid "Size in title disagrees with the dimension fields"
+msgstr ""
+
+#: includes/class-store-audit.php:36
+msgid "Duplicate product title (possible duplicate listing)"
+msgstr ""
+
+#: includes/class-store-audit.php:37
+msgid "Missing dimensions – cabin checker cannot run"
+msgstr ""
+
+#: includes/class-store-audit.php:38
+msgid "Main image has no alt text"
+msgstr ""
+
+#: includes/class-store-audit.php:39
+msgid "No short description"
+msgstr ""
+
+#: includes/class-store-audit.php:40
+msgid "Description under 150 characters"
+msgstr ""
+
+#: includes/class-store-audit.php:41
+msgid "Title over 70 characters (truncated in Google)"
+msgstr ""
+
+#: includes/class-store-audit.php:42
+msgid "Only in the default \"Uncategorized\" category"
+msgstr ""
+
+#: includes/class-store-audit.php:189
+#: includes/class-store-audit.php:190
+#: includes/class-store-audit.php:221
+msgid "Store audit"
+msgstr ""
+
+#: includes/class-store-audit.php:199
+msgid "You are not allowed to do that."
+msgstr ""
+
+#: includes/class-store-audit.php:222
+msgid "Checks every published product for problems that hurt search visibility, customer trust and sales. Fix the red ones first."
+msgstr ""
+
+#: includes/class-store-audit.php:227
+msgid "Run audit"
+msgstr ""
+
+#: includes/class-store-audit.php:227
+msgid "Run again"
+msgstr ""
+
+#. translators: %s: human time diff.
+#: includes/class-store-audit.php:232
+#, php-format
+msgid "Last run %s ago."
+msgstr ""
+
+#: includes/class-store-audit.php:234
+msgid "Tip: on big catalogues use WP-CLI: wp laukku audit --format=csv > audit.csv"
+msgstr ""
+
+#: includes/class-store-audit.php:247
+msgid "All"
+msgstr ""
+
+#: includes/class-store-audit.php:248
+msgid "High"
+msgstr ""
+
+#: includes/class-store-audit.php:249
+msgid "Medium"
+msgstr ""
+
+#: includes/class-store-audit.php:250
+msgid "Low"
+msgstr ""
+
+#: includes/class-store-audit.php:273
+msgid "Severity"
+msgstr ""
+
+#: includes/class-store-audit.php:274
+msgid "Product"
+msgstr ""
+
+#: includes/class-store-audit.php:275
+msgid "SKU"
+msgstr ""
+
+#: includes/class-store-audit.php:276
+msgid "Issue"
+msgstr ""
+
+#: includes/class-store-audit.php:277
+msgid "Detail"
+msgstr ""
+
+#: includes/class-store-audit.php:282
+msgid "No issues found. Nice!"
+msgstr ""
+
+#: laukku-travel-tools.php:53
+msgid "Laukku Travel Tools requires WooCommerce to be installed and active."
+msgstr ""
+
+#: laukku-travel-tools.php:106
+msgid "Settings"
+msgstr ""

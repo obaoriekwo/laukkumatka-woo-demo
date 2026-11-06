@@ -1,0 +1,160 @@
+{
+  "_comment": "Demo catalogue. Brands are fictional. Three products contain deliberate data problems so the Store audit has something to find (see README, 'Seeded issues').",
+  "categories": [
+    { "name": "Matkalaukut", "slug": "matkalaukut", "description": "Kovakuoriset ja pehmeät matkalaukut lomalle ja työmatkoille. Vertaa kokoja, painoa ja tilavuutta – ja tarkista, mikä laukku sopii käsimatkatavaraksi." },
+    { "name": "Käsimatkatavarat", "slug": "kasimatkatavarat", "parent": "matkalaukut", "description": "Käsimatkatavaralaukut, jotka on mitoitettu lentoyhtiöiden rajoihin. Jokaisella tuotesivulla näet, minkä lentoyhtiön mittoihin laukku mahtuu." },
+    { "name": "Isot matkalaukut", "slug": "isot-matkalaukut", "parent": "matkalaukut", "description": "Ruumaan menevät keskikokoiset ja suuret matkalaukut sekä laukkusetit pidemmille matkoille." },
+    { "name": "Laukut ja reput", "slug": "laukut-ja-reput", "description": "Reput, olkalaukut ja istuimen alle mahtuvat pienet laukut matkalle ja arkeen." },
+    { "name": "Reput", "slug": "reput", "parent": "laukut-ja-reput", "description": "Matkareput ja päiväreput – monet mahtuvat halpalentoyhtiöiden ilmaiseksi henkilökohtaiseksi tavaraksi." },
+    { "name": "Lompakot", "slug": "lompakot", "description": "Lompakot ja RFID-suojatut korttikotelot matkalle." },
+    { "name": "Pakkaaminen", "slug": "pakkaaminen", "description": "Pakkauskuutiot, toilettilaukut ja muut tarvikkeet, joilla laukkuun mahtuu enemmän." },
+    { "name": "Matkatarvikkeet", "slug": "matkatarvikkeet", "description": "Matkapistokesovittimet, laukkuhihnat, nimilaput ja muut pienet matkatarvikkeet." }
+  ],
+  "products": [
+    {
+      "sku": "KMS-CAB55-NV", "name": "Kaamos Cabin kovakuorinen käsimatkatavaralaukku 55x40x20 cm",
+      "brand": "Kaamos", "category": "kasimatkatavarat", "featured": true,
+      "regular": "89.95", "sale": "69.95", "stock": 24,
+      "dims": [55, 40, 20], "weight": "2.4", "volume": "36", "wheels": "4", "shell": "hard", "warranty": 5,
+      "image": { "type": "suitcase", "color": "#1f4e79" },
+      "short": "Kevyt ja kestävä polykarbonaattilaukku, joka mahtuu useimpien lentoyhtiöiden käsimatkatavaramittoihin. Neljä 360° pyörää ja TSA-lukko.",
+      "description": "Kaamos Cabin on tehty viikonloppumatkoille ja työmatkoille, joilla laukku kulkee mukana koneen matkustamossa. Kuori on joustavaa polykarbonaattia, joka palautuu kolhuista, ja sisällä on kaksi pakkausosastoa puristushihnoilla. Neljä kaksoispyörää kääntyy 360° ja teleskooppikahva lukittuu kolmeen korkeuteen. Integroitu TSA-hyväksytty numerolukko.\n\nMitat 55 × 40 × 20 cm sisältävät pyörät ja kahvat."
+    },
+    {
+      "sku": "KMS-CAB55P-GR", "name": "Kaamos Cabin Plus laajennettava käsimatkatavaralaukku 55x40x23 cm",
+      "brand": "Kaamos", "category": "kasimatkatavarat",
+      "regular": "99.95", "stock": 12,
+      "dims": [55, 40, 23], "weight": "2.7", "volume": "42", "wheels": "4", "shell": "hard", "warranty": 5,
+      "image": { "type": "suitcase", "color": "#4b5563" },
+      "short": "Hieman tilavampi käsimatkatavaralaukku SAS-, Norwegian- ja Wizz Air -mittoihin. Etutasku läppärille.",
+      "description": "Cabin Plus on Kaamos Cabinin isoveli: 3 cm syvempi runko antaa lähes 6 litraa lisää tilaa ja etutaskuun mahtuu 15,6\" kannettava. Sopii lentoyhtiöille, joiden raja on 55 × 40 × 23 cm. Huom: Ryanairin 20 cm syvyysraja ei täyty."
+    },
+    {
+      "sku": "AER-LITE56-BL", "name": "Aero Lite pehmeä käsimatkatavaralaukku 56x45x25 cm",
+      "brand": "Aero", "category": "kasimatkatavarat",
+      "regular": "79.95", "stock": 8,
+      "dims": [56, 45, 25], "weight": "1.9", "volume": "48", "wheels": "2", "shell": "soft", "warranty": 2,
+      "image": { "type": "softcase", "color": "#2563eb" },
+      "short": "Erittäin kevyt kangaslaukku Finnairin suurimpaan käsimatkatavarakokoon. Paljon ulkotaskuja.",
+      "description": "Aero Lite painaa vain 1,9 kg, joten 8 kg:n painorajasta jää enemmän tavaroille. Vettähylkivä polyesteri, kaksi ulkotaskua ja vahvistetut kulmat. Suunniteltu Finnairin 56 × 45 × 25 cm käsimatkatavararajaan."
+    },
+    {
+      "sku": "NT-US4030-BK", "name": "Nordic Trail Underseat laukku 40x30x20 cm",
+      "brand": "Nordic Trail", "category": "laukut-ja-reput", "featured": true,
+      "regular": "39.95", "sale": "29.95", "stock": 40,
+      "dims": [40, 30, 20], "weight": "0.6", "volume": "24", "wheels": "0", "shell": "soft", "warranty": 2,
+      "image": { "type": "underseat", "color": "#111827" },
+      "short": "Ilmainen henkilökohtainen tavara Ryanairilla ja Wizz Airilla – mahtuu edessä olevan istuimen alle.",
+      "description": "Nordic Trail Underseat on mitoitettu tarkasti halpalentoyhtiöiden ilmaisen henkilökohtaisen tavaran rajaan 40 × 30 × 20 cm. Laukussa on matkalaukun kahvaan kiinnittyvä hihna, pehmustettu tabletin tasku ja lukittava vetoketju. Kantaminen onnistuu olalla tai reppuna."
+    },
+    {
+      "sku": "NT-US4030-GR", "name": "Nordic Trail Underseat laukku 40x30x20 cm",
+      "brand": "Nordic Trail", "category": "laukut-ja-reput",
+      "regular": "39.95", "stock": 6,
+      "dims": [40, 30, 20], "weight": "0.6", "volume": "24", "wheels": "0", "shell": "soft", "warranty": 2,
+      "image": { "type": "underseat", "color": "#6b7280" },
+      "short": "Harmaa värivaihtoehto.",
+      "description": "Sama laukku harmaana.",
+      "_seeded_issue": "Duplicate listing: should be a colour variation of NT-US4030-BK, not a separate product."
+    },
+    {
+      "sku": "AER-SLIM-BP", "name": "Aero Slim matkareppu 45x36x20 cm",
+      "brand": "Aero", "category": "reput",
+      "regular": "34.95", "stock": 18,
+      "dims": [45, 36, 20], "weight": "0.7", "volume": "28", "wheels": "0", "shell": "soft", "warranty": 2,
+      "image": { "type": "backpack", "color": "#0f766e" },
+      "slug": "aero-slim-matkareppu-40x30x20-cm",
+      "short": "Ohut reppu easyJetin ilmaiseen henkilökohtaiseen tavaraan (45 × 36 × 20 cm).",
+      "description": "Aero Slim avautuu kokonaan kuin matkalaukku, joten pakkaaminen on helppoa. Selkäpuolella on piilotasku passille ja pehmustettu läppäriosasto. Sopii easyJetin ilmaisen käsimatkatavaran mittoihin.",
+      "_seeded_issue": "URL slug says 40x30x20 but the title says 45x36x20 (same problem as on the live store)."
+    },
+    {
+      "sku": "NT-DAY20-OR", "name": "Nordic Trail Daypack 20 L päivärepu",
+      "brand": "Nordic Trail", "category": "reput", "featured": true,
+      "regular": "49.95", "stock": 15,
+      "dims": [45, 30, 15], "weight": "0.5", "volume": "20", "wheels": "0", "shell": "soft", "warranty": 2,
+      "image": { "type": "backpack", "color": "#c2410c" },
+      "short": "Kevyt päivärepu kaupunkilomille ja retkille. Vesipullotaskut molemmin puolin.",
+      "description": "20 litran päivärepussa on hengittävä selkäosa, rintahihna ja heijastimet pimeisiin iltoihin. Pääosaston sisällä on tasku 14\" kannettavalle. Kangas on kierrätettyä polyesteriä."
+    },
+    {
+      "sku": "KMS-MED66-NV", "name": "Kaamos Medium kovakuorinen matkalaukku 66 cm",
+      "brand": "Kaamos", "category": "isot-matkalaukut",
+      "regular": "119.95", "stock": 10,
+      "dims": [66, 45, 27], "weight": "3.4", "volume": "65", "wheels": "4", "shell": "hard", "warranty": 5,
+      "image": { "type": "suitcase", "color": "#1f4e79" },
+      "short": "Keskikokoinen ruumaan menevä laukku noin viikon matkalle. 65 litraa, paino 3,4 kg.",
+      "description": "Kaamos Medium on suosituin kokomme 5–10 päivän lomille. Laajennettava vetoketju antaa 4 litraa lisätilaa paluumatkan tuliaisille. Polykarbonaattikuori, TSA-lukko ja hiljaiset kaksoispyörät."
+    },
+    {
+      "sku": "KMS-LRG77-RD", "name": "Kaamos Large kovakuorinen matkalaukku 77 cm",
+      "brand": "Kaamos", "category": "isot-matkalaukut", "featured": true,
+      "regular": "129.95", "sale": "99.95", "stock": 7,
+      "dims": [77, 52, 30], "weight": "4.3", "volume": "100", "wheels": "4", "shell": "hard", "warranty": 5,
+      "image": { "type": "suitcase", "color": "#b91c1c" },
+      "short": "Iso 100 litran matkalaukku perhelomille ja pitkille reissuille.",
+      "description": "Kaamos Large vie koko perheen rantavarusteet. Huomioi lentoyhtiön 23 kg painoraja – laukun oma paino on vain 4,3 kg. Mukana irrotettava pyykkipussi ja kenkäpussi."
+    },
+    {
+      "sku": "REV-SET2", "name": "Revontuli 2-osainen matkalaukkusetti",
+      "brand": "Revontuli", "category": "isot-matkalaukut",
+      "regular": "169.00", "stock": 4,
+      "image": { "type": "set", "color": "#047857" },
+      "short": "Setti: käsimatkatavaralaukku ja keskikokoinen matkalaukku edulliseen settihintaan.",
+      "description": "Revontuli-setissä on käsimatkatavaralaukku ja 66 cm matkalaukku samassa värissä. Laukut sisäkkäin säilytettynä vievät vain yhden laukun tilan.",
+      "_seeded_issue": "No dimensions entered, so the cabin checker cannot run."
+    },
+    {
+      "sku": "EUR-DUF50", "name": "Eurotrip Duffel kassi 50x30x25 cm",
+      "brand": "Eurotrip", "category": "laukut-ja-reput",
+      "regular": "44.95", "stock": 9,
+      "dims": [55, 35, 25], "weight": "0.9", "volume": "40", "wheels": "0", "shell": "soft", "warranty": 2,
+      "image": { "type": "duffel", "color": "#7c3aed" },
+      "short": "Pehmeä 40 litran kassi salille, viikonloppuun ja käsimatkatavaraksi.",
+      "description": "Eurotrip Duffel on valmistettu vahvasta pinnoitetusta kankaasta. Päädyssä on erillinen kenkätasku ja irrotettava olkahihna.",
+      "_seeded_issue": "Title says 50x30x25 cm but the dimension fields say 55x35x25 cm."
+    },
+    {
+      "sku": "RFID-WAL-BR", "name": "RFID-suojattu nahkalompakko",
+      "brand": "Nordic Trail", "category": "lompakot",
+      "regular": "24.95", "stock": 30,
+      "image": { "type": "wallet", "color": "#92400e" },
+      "short": "",
+      "description": "Aitoa nahkaa oleva lompakko, jossa RFID-suojaus estää lähimaksukorttien luvattoman lukemisen. Kahdeksan korttipaikkaa, kolikkotasku ja setelilokero.",
+      "_seeded_issue": "Missing short description."
+    },
+    {
+      "sku": "PK-CUBE4", "name": "Pakkauskuutiot 4 kpl setti",
+      "brand": "Nordic Trail", "category": "pakkaaminen", "featured": false,
+      "regular": "19.95", "sale": "14.95", "stock": 50,
+      "image": { "type": "cubes", "color": "#0891b2" },
+      "short": "Neljä eri kokoista pakkauskuutiota – vaatteet pysyvät järjestyksessä ja laukkuun mahtuu enemmän.",
+      "description": "Setissä on yksi suuri, kaksi keskikokoista ja yksi pieni pakkauskuutio. Verkkokansi näyttää sisällön, ja kahvasta kuution saa nostettua laukusta helposti. Kevyttä ripstop-nailonia."
+    },
+    {
+      "sku": "PK-TOIL1L", "name": "Läpinäkyvä toilettilaukku 1 L (lentokenttä)",
+      "brand": "Aero", "category": "pakkaaminen",
+      "regular": "9.95", "stock": 80,
+      "image": { "type": "toiletry", "color": "#64748b" },
+      "short": "Läpinäkyvä 1 litran pussi nesteille turvatarkastukseen.",
+      "description": "Läpinäkyvä, vetoketjullinen pussi, johon mahtuvat enintään 100 ml:n nestepakkaukset. Tarkista lentoaseman ajantasaiset nestesäännöt ennen matkaa."
+    },
+    {
+      "sku": "ACC-ADAPT-USBC", "name": "Maailmanlaajuinen matkapistokesovitin USB-C",
+      "brand": "Aero", "category": "matkatarvikkeet",
+      "regular": "24.95", "stock": 35,
+      "image": { "type": "adapter", "color": "#f8fafc" },
+      "short": "Yksi sovitin yli 150 maahan. Kaksi USB-A- ja yksi USB-C-latausportti.",
+      "description": "Liukukytkimillä valittavat pistokkeet EU, UK, US ja AU. Sisäänrakennettu sulake ja ylijännitesuoja. USB-C PD 20 W lataa puhelimen nopeasti."
+    },
+    {
+      "sku": "ACC-STRAP", "name": "Matkalaukun hihna ja nimilappu",
+      "brand": "Kaamos", "category": "matkatarvikkeet",
+      "regular": "9.95", "stock": 60,
+      "image": { "type": "strap", "color": "#f59e0b" },
+      "short": "Näkyvä hihna tunnistaa laukun hihnalta.",
+      "description": "Värikäs hihna ja nimilappu.",
+      "_seeded_issue": "Thin description; main image without alt text."
+    }
+  ]
+}

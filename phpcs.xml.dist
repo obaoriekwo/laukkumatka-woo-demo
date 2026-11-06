@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<ruleset name="Laukku demo">
+	<description>WordPress Coding Standards for the child theme and plugin.</description>
+
+	<file>wp-content/plugins/laukku-travel-tools</file>
+	<file>wp-content/themes/laukku-storefront-child</file>
+	<file>bin</file>
+
+	<arg name="extensions" value="php"/>
+	<arg value="sp"/>
+
+	<config name="minimum_wp_version" value="6.4"/>
+	<config name="testVersion" value="8.0-"/>
+
+	<rule ref="WordPress-Extra">
+		<!-- PSR-4 style class file names are fine for namespaced classes. -->
+		<exclude name="WordPress.Files.FileName"/>
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax"/>
+	</rule>
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="laukku-travel-tools"/>
+				<element value="laukku-child"/>
+			</property>
+		</properties>
+	</rule>
+	<rule ref="WordPress.WP.Capabilities">
+		<properties>
+			<property name="custom_capabilities" type="array">
+				<element value="manage_woocommerce"/>
+			</property>
+		</properties>
+	</rule>
+	<!-- The setup script is a CLI tool, not shipped code. -->
+	<rule ref="WordPress.WP.GlobalVariablesOverride">
+		<exclude-pattern>bin/*</exclude-pattern>
+	</rule>
+</ruleset>

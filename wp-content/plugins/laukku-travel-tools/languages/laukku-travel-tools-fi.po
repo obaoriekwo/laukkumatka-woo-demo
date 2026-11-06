@@ -1,0 +1,449 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: laukku-travel-tools\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: laukku-travel-tools\n"
+
+#. Plugin Name of the plugin
+#: laukku-travel-tools.php
+msgid "Laukku Travel Tools"
+msgstr ""
+
+#. Description of the plugin
+#: laukku-travel-tools.php
+msgid ""
+"Luggage-specific features for a WooCommerce bag & luggage store: cabin-size "
+"checker per airline, \"will it fit?\" product finder, free-shipping progress"
+" bar, richer product structured data and a catalogue quality audit (admin "
+"page + WP-CLI)."
+msgstr ""
+
+#. Author of the plugin
+#: laukku-travel-tools.php
+msgid "Oba Oriekwo"
+msgstr ""
+
+#: includes/class-cabin-checker.php:60
+msgid "under-seat bag (free)"
+msgstr "istuimen alle (ilmainen)"
+
+#: includes/class-cabin-checker.php:61
+msgid "cabin bag"
+msgstr "käsimatkatavara"
+
+#: includes/class-cabin-checker.php:161
+msgid "Cabin size"
+msgstr "Käsimatkatavarakoko"
+
+#. translators: %s: comma separated airline names.
+#: includes/class-cabin-checker.php:194
+msgid "Fits as cabin bag: %s"
+msgstr "Sopii käsimatkatavaraksi: %s"
+
+#: includes/class-cabin-checker.php:197
+msgid "Check-in size – too big for most cabin limits"
+msgstr "Ruumakoko – liian suuri useimpiin käsimatkatavararajoihin"
+
+#. translators: %s: bag dimensions.
+#: includes/class-cabin-checker.php:204
+msgid "Bag size: %s (incl. wheels and handles)"
+msgstr "Laukun koko: %s (sis. pyörät ja kahvat)"
+
+#: includes/class-cabin-checker.php:208
+msgid "Airline hand-luggage size limits compared with this bag"
+msgstr ""
+"Lentoyhtiöiden käsimatkatavaroiden kokorajat verrattuna tähän laukkuun"
+
+#: includes/class-cabin-checker.php:211
+msgid "Airline"
+msgstr "Lentoyhtiö"
+
+#: includes/class-cabin-checker.php:212
+msgid "Limit"
+msgstr "Raja"
+
+#: includes/class-cabin-checker.php:213
+msgid "Fits?"
+msgstr "Sopiiko?"
+
+#: includes/class-cabin-checker.php:224
+msgid "Yes"
+msgstr "Kyllä"
+
+#: includes/class-cabin-checker.php:226
+msgid "No"
+msgstr "Ei"
+
+#: includes/class-cabin-checker.php:234
+msgid ""
+"Airlines change their rules and fares differ – always confirm with your "
+"airline before flying."
+msgstr ""
+"Lentoyhtiöiden säännöt muuttuvat ja lipputyypit eroavat – tarkista aina "
+"omalta lentoyhtiöltäsi ennen matkaa."
+
+#: includes/class-cabin-checker.php:236
+msgid "Find more bags that fit"
+msgstr "Etsi lisää sopivia laukkuja"
+
+#: includes/class-cabin-checker.php:275
+msgid "Will it fit on the plane?"
+msgstr "Sopiiko laukku koneeseen?"
+
+#: includes/class-cabin-checker.php:277
+msgid "Choose airline and ticket type"
+msgstr "Valitse lentoyhtiö ja lipputyyppi"
+
+#: includes/class-cabin-checker.php:279
+msgid "— Select —"
+msgstr "— Valitse —"
+
+#: includes/class-cabin-checker.php:288
+msgid "…or enter your own size limit (cm)"
+msgstr "…tai syötä oma kokoraja (cm)"
+
+#: includes/class-cabin-checker.php:291
+msgid "Length"
+msgstr "Pituus"
+
+#: includes/class-cabin-checker.php:292
+msgid "Width"
+msgstr "Leveys"
+
+#: includes/class-cabin-checker.php:293
+msgid "Height"
+msgstr "Korkeus"
+
+#: includes/class-cabin-checker.php:303
+msgid "Show bags that fit"
+msgstr "Näytä sopivat laukut"
+
+#. translators: %s: dimensions.
+#: includes/class-cabin-checker.php:321
+msgid "Bags that fit inside %s"
+msgstr "Laukut, jotka mahtuvat mittoihin %s"
+
+#. translators: 1: airline name, 2: bag type.
+#: includes/class-cabin-checker.php:340
+msgid "Bags that fit %1$s as %2$s"
+msgstr "Laukut, jotka sopivat: %1$s, %2$s"
+
+#: includes/class-cabin-checker.php:346
+msgid ""
+"No bags found for that size. Try a larger limit or a different ticket type."
+msgstr ""
+"Tähän kokoon sopivia laukkuja ei löytynyt. Kokeile suurempaa rajaa tai "
+"toista lipputyyppiä."
+
+#. translators: %s: amount of money still needed.
+#: includes/class-free-shipping-bar.php:97
+msgid "Add %s more to get free delivery!"
+msgstr "Lisää ostoskoriin vielä %s, niin toimitus on ilmainen!"
+
+#: includes/class-free-shipping-bar.php:101
+msgid "Your order ships for free!"
+msgstr "Tilauksesi toimitetaan ilmaiseksi!"
+
+#: includes/class-free-shipping-bar.php:114
+msgid "Progress towards free delivery"
+msgstr "Edistyminen kohti ilmaista toimitusta"
+
+#: includes/class-luggage-fields.php:41 includes/class-luggage-fields.php:50
+msgid "— Not specified —"
+msgstr "— Ei määritetty —"
+
+#: includes/class-luggage-fields.php:42
+msgid "Hard shell"
+msgstr "Kovakuorinen"
+
+#: includes/class-luggage-fields.php:43
+msgid "Soft shell (fabric)"
+msgstr "Pehmeä (kangas)"
+
+#: includes/class-luggage-fields.php:51
+msgid "No wheels"
+msgstr "Ei pyöriä"
+
+#: includes/class-luggage-fields.php:52
+msgid "2 wheels"
+msgstr "2 pyörää"
+
+#: includes/class-luggage-fields.php:53
+msgid "4 spinner wheels"
+msgstr "4 kääntyvää pyörää"
+
+#: includes/class-luggage-fields.php:59
+msgid "Luggage"
+msgstr "Laukku"
+
+#: includes/class-luggage-fields.php:74
+msgid "Volume (litres)"
+msgstr "Tilavuus (litraa)"
+
+#: includes/class-luggage-fields.php:81
+msgid "Shown on product cards and in structured data."
+msgstr "Näytetään tuotekorteissa ja rakenteisessa datassa."
+
+#: includes/class-luggage-fields.php:88 includes/class-luggage-fields.php:205
+msgid "Wheels"
+msgstr "Pyörät"
+
+#: includes/class-luggage-fields.php:96 includes/class-luggage-fields.php:213
+msgid "Shell type"
+msgstr "Kuoren tyyppi"
+
+#: includes/class-luggage-fields.php:104
+msgid "Warranty (years)"
+msgstr "Takuu (vuotta)"
+
+#: includes/class-luggage-fields.php:114
+msgid ""
+"Tip: fill in length, width and height on the Shipping tab – the cabin-size "
+"checker uses them."
+msgstr ""
+"Vinkki: täytä pituus, leveys ja korkeus Toimitus-välilehdelle – "
+"käsimatkatavaratarkistin käyttää niitä."
+
+#. translators: %s: dimensions joined with a multiplication sign.
+#: includes/class-luggage-fields.php:155
+msgid "%s cm"
+msgstr "%s cm"
+
+#. translators: %s: volume in litres.
+#: includes/class-luggage-fields.php:168 includes/class-luggage-fields.php:198
+msgid "%s L"
+msgstr "%s l"
+
+#. translators: %d: number of wheels.
+#: includes/class-luggage-fields.php:173
+msgid "%d wheel"
+msgid_plural "%d wheels"
+msgstr[0] "%d pyörä"
+msgstr[1] "%d pyörää"
+
+#: includes/class-luggage-fields.php:196
+msgid "Volume"
+msgstr "Tilavuus"
+
+#: includes/class-luggage-fields.php:220
+msgid "Warranty"
+msgstr "Takuu"
+
+#. translators: %d: number of years.
+#: includes/class-luggage-fields.php:222
+msgid "%d year"
+msgid_plural "%d years"
+msgstr[0] "%d vuosi"
+msgstr[1] "%d vuotta"
+
+#: includes/class-settings.php:24 includes/class-settings.php:43
+msgid "Travel tools"
+msgstr "Matkatyökalut"
+
+#: includes/class-settings.php:45
+msgid "Luggage-store features from the Laukku Travel Tools plugin."
+msgstr "Laukkukaupan ominaisuudet Laukku Travel Tools -lisäosasta."
+
+#: includes/class-settings.php:49
+msgid "Cabin-size badge"
+msgstr "Käsimatkatavaramerkki"
+
+#: includes/class-settings.php:50
+msgid "Show a \"Cabin size\" badge on product cards"
+msgstr "Näytä \"Käsimatkatavarakoko\"-merkki tuotekorteissa"
+
+#: includes/class-settings.php:56
+msgid "Check cabin size for"
+msgstr "Tarkista käsimatkatavarakoko osastoille"
+
+#: includes/class-settings.php:57
+msgid ""
+"Categories that contain bags. Leave empty to check every product that has "
+"dimensions."
+msgstr ""
+"Osastot, joissa on laukkuja. Jätä tyhjäksi, niin kaikki mitoitetut tuotteet "
+"tarkistetaan."
+
+#: includes/class-settings.php:66
+msgid "Finder page"
+msgstr "Hakusivu"
+
+#: includes/class-settings.php:67
+msgid ""
+"Page that contains the [laukku_cabin_finder] shortcode. Linked from product "
+"pages."
+msgstr ""
+"Sivu, jolla on [laukku_cabin_finder]-lyhytkoodi. Linkitetään tuotesivuilta."
+
+#: includes/class-settings.php:72
+msgid "— None —"
+msgstr "— Ei mitään —"
+
+#: includes/class-settings.php:75
+msgid "Free-shipping progress bar"
+msgstr "Ilmaisen toimituksen edistymispalkki"
+
+#: includes/class-settings.php:76
+msgid "Show in cart, mini-cart and checkout"
+msgstr "Näytä ostoskorissa, minikorissa ja kassalla"
+
+#: includes/class-settings.php:82
+msgid "Fallback threshold (€)"
+msgstr "Vararaja (€)"
+
+#: includes/class-settings.php:83
+msgid ""
+"Used only if no Free shipping method with a minimum amount is configured."
+msgstr ""
+"Käytetään vain, jos ilmaista toimitustapaa vähimmäissummalla ei ole "
+"asetettu."
+
+#: includes/class-settings.php:94
+msgid "Return window (days)"
+msgstr "Palautusaika (päivää)"
+
+#: includes/class-settings.php:95
+msgid ""
+"Added to product structured data as a MerchantReturnPolicy. 0 = disabled."
+msgstr ""
+"Lisätään tuotteen rakenteiseen dataan MerchantReturnPolicy-tietona. 0 = pois"
+" käytöstä."
+
+#: includes/class-store-audit.php:31
+msgid "No product image"
+msgstr "Ei tuotekuvaa"
+
+#: includes/class-store-audit.php:32
+msgid "No price – product cannot be bought"
+msgstr "Ei hintaa – tuotetta ei voi ostaa"
+
+#: includes/class-store-audit.php:33
+msgid "Sale price is not lower than regular price"
+msgstr "Alennushinta ei ole normaalihintaa alempi"
+
+#: includes/class-store-audit.php:34
+msgid "Size in title and in URL disagree"
+msgstr "Otsikon ja URL-osoitteen koot eroavat"
+
+#: includes/class-store-audit.php:35
+msgid "Size in title disagrees with the dimension fields"
+msgstr "Otsikon koko eroaa mittakentistä"
+
+#: includes/class-store-audit.php:36
+msgid "Duplicate product title (possible duplicate listing)"
+msgstr "Sama tuotenimi useammin (mahdollinen tuplatuote)"
+
+#: includes/class-store-audit.php:37
+msgid "Missing dimensions – cabin checker cannot run"
+msgstr "Mitat puuttuvat – käsimatkatavaratarkistus ei toimi"
+
+#: includes/class-store-audit.php:38
+msgid "Main image has no alt text"
+msgstr "Pääkuvalta puuttuu alt-teksti"
+
+#: includes/class-store-audit.php:39
+msgid "No short description"
+msgstr "Lyhyt kuvaus puuttuu"
+
+#: includes/class-store-audit.php:40
+msgid "Description under 150 characters"
+msgstr "Kuvaus alle 150 merkkiä"
+
+#: includes/class-store-audit.php:41
+msgid "Title over 70 characters (truncated in Google)"
+msgstr "Otsikko yli 70 merkkiä (katkeaa Googlessa)"
+
+#: includes/class-store-audit.php:42
+msgid "Only in the default \"Uncategorized\" category"
+msgstr "Vain oletusosastossa \"Luokittelematon\""
+
+#: includes/class-store-audit.php:189 includes/class-store-audit.php:190
+#: includes/class-store-audit.php:221
+msgid "Store audit"
+msgstr "Kaupan tarkastus"
+
+#: includes/class-store-audit.php:199
+msgid "You are not allowed to do that."
+msgstr "Sinulla ei ole oikeutta tähän."
+
+#: includes/class-store-audit.php:222
+msgid ""
+"Checks every published product for problems that hurt search visibility, "
+"customer trust and sales. Fix the red ones first."
+msgstr ""
+"Tarkistaa jokaisen julkaistun tuotteen ongelmien varalta, jotka heikentävät "
+"hakunäkyvyyttä, asiakkaiden luottamusta ja myyntiä. Korjaa punaiset ensin."
+
+#: includes/class-store-audit.php:227
+msgid "Run audit"
+msgstr "Aja tarkastus"
+
+#: includes/class-store-audit.php:227
+msgid "Run again"
+msgstr "Aja uudelleen"
+
+#. translators: %s: human time diff.
+#: includes/class-store-audit.php:232
+msgid "Last run %s ago."
+msgstr "Ajettu viimeksi %s sitten."
+
+#: includes/class-store-audit.php:234
+msgid ""
+"Tip: on big catalogues use WP-CLI: wp laukku audit --format=csv > audit.csv"
+msgstr ""
+"Vinkki: isoissa valikoimissa käytä WP-CLI:tä: wp laukku audit --format=csv >"
+" audit.csv"
+
+#: includes/class-store-audit.php:247
+msgid "All"
+msgstr "Kaikki"
+
+#: includes/class-store-audit.php:248
+msgid "High"
+msgstr "Korkea"
+
+#: includes/class-store-audit.php:249
+msgid "Medium"
+msgstr "Keskitaso"
+
+#: includes/class-store-audit.php:250
+msgid "Low"
+msgstr "Matala"
+
+#: includes/class-store-audit.php:273
+msgid "Severity"
+msgstr "Vakavuus"
+
+#: includes/class-store-audit.php:274
+msgid "Product"
+msgstr "Tuote"
+
+#: includes/class-store-audit.php:275
+msgid "SKU"
+msgstr "Tuotekoodi"
+
+#: includes/class-store-audit.php:276
+msgid "Issue"
+msgstr "Ongelma"
+
+#: includes/class-store-audit.php:277
+msgid "Detail"
+msgstr "Lisätieto"
+
+#: includes/class-store-audit.php:282
+msgid "No issues found. Nice!"
+msgstr "Ongelmia ei löytynyt. Hienoa!"
+
+#: laukku-travel-tools.php:53
+msgid "Laukku Travel Tools requires WooCommerce to be installed and active."
+msgstr ""
+"Laukku Travel Tools vaatii, että WooCommerce on asennettu ja käytössä."
+
+#: laukku-travel-tools.php:106
+msgid "Settings"
+msgstr "Asetukset"

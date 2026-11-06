@@ -1,0 +1,360 @@
+/* ==========================================================================
+   Laukku Storefront Child – main stylesheet
+   Loaded after Storefront. Mobile first. Uses Storefront's markup.
+   ========================================================================== */
+
+:root {
+	--lk-navy: #0b2a3c;
+	--lk-navy-2: #12405b;
+	--lk-accent: #c2410c;        /* 4.9:1 on white – passes WCAG AA for text */
+	--lk-accent-dark: #9a3412;
+	--lk-text: #3d4752;
+	--lk-muted: #5b6672;
+	--lk-surface: #f5f7f9;
+	--lk-border: #e1e6eb;
+	--lk-radius: 12px;
+	--lk-shadow: 0 1px 2px rgba(11, 42, 60, .06), 0 4px 14px rgba(11, 42, 60, .06);
+	--lk-font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+	/* Plugin variables (Laukku Travel Tools) */
+	--laukku-accent: var(--lk-accent);
+	--laukku-surface: var(--lk-surface);
+	--laukku-border: var(--lk-border);
+	--laukku-radius: var(--lk-radius);
+}
+
+body,
+button,
+input,
+select,
+textarea {
+	font-family: var(--lk-font);
+}
+
+body { color: var(--lk-text); -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4,
+.site-title,
+.woocommerce-products-header__title {
+	color: var(--lk-navy);
+	letter-spacing: -0.01em;
+	font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   Accessibility: clear keyboard focus everywhere (Storefront's is subtle)
+   ----------------------------------------------------------------------- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+.button:focus-visible {
+	outline: 3px solid var(--lk-accent);
+	outline-offset: 2px;
+	box-shadow: none;
+}
+
+/* --------------------------------------------------------------------------
+   Trust bar
+   ----------------------------------------------------------------------- */
+.laukku-trustbar {
+	background: var(--lk-navy);
+	color: #fff;
+	font-size: .8125rem;
+}
+.laukku-trustbar__list {
+	display: flex;
+	gap: .5em 2em;
+	margin: 0 auto;
+	padding-top: .55em;
+	padding-bottom: .55em;
+	list-style: none;
+	overflow-x: auto;
+	white-space: nowrap;
+	scrollbar-width: none;
+}
+.laukku-trustbar__list::-webkit-scrollbar { display: none; }
+.laukku-trustbar__list li { margin: 0; }
+.laukku-trustbar__list li::before { content: "✓"; margin-right: .45em; color: #fdba74; font-weight: 700; }
+
+/* --------------------------------------------------------------------------
+   Header
+   ----------------------------------------------------------------------- */
+.site-header {
+	border-bottom: 1px solid var(--lk-border);
+	padding-top: 1.25em;
+}
+.site-header .site-branding .site-title { font-size: 1.6rem; }
+.site-header .site-branding .site-title a { color: var(--lk-navy); }
+.site-header .site-search .widget_product_search form input[type="search"] {
+	border-radius: 999px;
+	background: var(--lk-surface);
+	border: 1px solid var(--lk-border);
+}
+.main-navigation ul.menu > li > a,
+.main-navigation ul.nav-menu > li > a { font-weight: 600; }
+@media (min-width: 768px) {
+	.main-navigation ul.menu > li > a,
+	.main-navigation ul.nav-menu > li > a { padding-left: .55em; padding-right: .55em; font-size: .9375rem; }
+	.main-navigation ul.menu > li:first-child > a,
+	.main-navigation ul.nav-menu > li:first-child > a { padding-left: 0; }
+}
+
+/* --------------------------------------------------------------------------
+   Buttons
+   ----------------------------------------------------------------------- */
+.button,
+button,
+input[type="submit"],
+.added_to_cart {
+	border-radius: 8px;
+	font-weight: 600;
+	transition: background-color .15s ease, transform .1s ease;
+}
+.button.alt,
+.single_add_to_cart_button,
+.checkout-button,
+#place_order {
+	background-color: var(--lk-accent) !important;
+	color: #fff !important;
+}
+.button.alt:hover,
+.single_add_to_cart_button:hover,
+.checkout-button:hover,
+#place_order:hover {
+	background-color: var(--lk-accent-dark) !important;
+}
+.button:active { transform: translateY(1px); }
+.hentry .entry-content a.wc-block-components-button,
+.hentry .entry-content a.button { text-decoration: none; }
+
+/* --------------------------------------------------------------------------
+   Product cards
+   ----------------------------------------------------------------------- */
+ul.products li.product {
+	display: flex;
+	flex-direction: column;
+	padding: .75em;
+	text-align: left;
+	background: #fff;
+	border: 1px solid var(--lk-border);
+	border-radius: var(--lk-radius);
+	transition: box-shadow .2s ease, border-color .2s ease;
+}
+ul.products li.product:hover {
+	box-shadow: var(--lk-shadow);
+	border-color: #cfd7df;
+}
+ul.products li.product img {
+	margin-bottom: .75em;
+	border-radius: 8px;
+	background: var(--lk-surface);
+	aspect-ratio: 1 / 1;
+	object-fit: contain;
+}
+ul.products li.product .woocommerce-loop-product__title {
+	font-size: .975rem;
+	font-weight: 600;
+	line-height: 1.35;
+	color: var(--lk-navy);
+	padding: 0;
+	margin: 0 0 .25em;
+}
+ul.products li.product .price {
+	margin-top: auto;
+	font-size: 1.05rem;
+	font-weight: 700;
+	color: var(--lk-navy);
+}
+ul.products li.product .price del { color: var(--lk-muted); font-weight: 400; font-size: .85em; }
+ul.products li.product .price ins { color: var(--lk-accent); background: none; }
+ul.products li.product .button {
+	width: 100%;
+	margin-top: .5em;
+	margin-bottom: 0;
+}
+ul.products li.product .onsale,
+.single-product .onsale {
+	position: absolute;
+	top: .6em;
+	right: .6em;
+	z-index: 2;
+	margin: 0;
+	padding: .2em .55em;
+	border: 0;
+	border-radius: 999px;
+	background: var(--lk-accent);
+	color: #fff;
+	font-size: .8rem;
+	font-weight: 700;
+}
+.single-product .onsale { position: static; display: inline-block; margin-bottom: .75em; }
+
+/* Two columns on phones, with tighter gaps. */
+@media (max-width: 767px) {
+	.site-main ul.products {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: .75em;
+	}
+	.site-main ul.products::before,
+	.site-main ul.products::after { display: none; }
+	.site-main ul.products li.product {
+		width: auto !important;
+		margin: 0 !important;
+		float: none !important;
+	}
+	ul.products li.product .woocommerce-loop-product__title { font-size: .9rem; hyphens: auto; }
+	h1, .entry-title, .woocommerce-products-header__title { font-size: 2rem; line-height: 1.15; }
+	.single-product div.product .product_title { font-size: 1.5rem; hyphens: auto; }
+	.laukku-card-specs { font-size: .75rem; }
+}
+
+/* --------------------------------------------------------------------------
+   Single product
+   ----------------------------------------------------------------------- */
+.single-product div.product .product_title { font-size: 1.75rem; line-height: 1.2; }
+.single-product div.product p.price { font-size: 1.6rem; font-weight: 700; color: var(--lk-navy); }
+.single-product div.product p.price ins { color: var(--lk-accent); background: none; }
+.single-product div.product .woocommerce-product-details__short-description { font-size: 1rem; }
+.single-product div.product form.cart {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	gap: .75em;
+	padding: 1em 0;
+	margin-bottom: .5em;
+}
+.single-product div.product form.cart .quantity { margin: 0; float: none; }
+.single-product div.product form.cart .single_add_to_cart_button {
+	flex: 1 1 14em;
+	padding: .9em 1.5em;
+	font-size: 1.05rem;
+}
+.single-product div.product .woocommerce-product-gallery img { border-radius: var(--lk-radius); background: var(--lk-surface); }
+
+.laukku-assurance {
+	display: grid;
+	gap: .4em;
+	margin: 0 0 1.5em;
+	padding: 1em;
+	list-style: none;
+	border-radius: var(--lk-radius);
+	background: var(--lk-surface);
+	font-size: .9rem;
+}
+.laukku-assurance__item::before { content: "✓"; margin-right: .5em; color: #1a7f37; font-weight: 700; }
+
+/* --------------------------------------------------------------------------
+   Quantity stepper (JS-enhanced)
+   ----------------------------------------------------------------------- */
+.quantity.laukku-qty {
+	display: inline-flex;
+	align-items: stretch;
+	border: 1px solid var(--lk-border);
+	border-radius: 8px;
+	overflow: hidden;
+	background: #fff;
+}
+.quantity.laukku-qty .qty {
+	width: 3.2em;
+	border: 0;
+	text-align: center;
+	background: transparent;
+	-moz-appearance: textfield;
+	appearance: textfield;
+	box-shadow: none;
+}
+.quantity.laukku-qty .qty::-webkit-outer-spin-button,
+.quantity.laukku-qty .qty::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.laukku-qty__btn {
+	min-width: 44px; /* WCAG 2.5.8 target size */
+	min-height: 44px;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	background: var(--lk-surface);
+	color: var(--lk-navy);
+	font-size: 1.25rem;
+	line-height: 1;
+}
+.laukku-qty__btn:hover { background: var(--lk-border); }
+
+/* --------------------------------------------------------------------------
+   Homepage
+   ----------------------------------------------------------------------- */
+/* The hero carries the H1, so hide the "Etusivu" page title and let the hero use full width. */
+.page-template-template-homepage .type-page .entry-header { display: none; }
+.page-template-template-homepage .type-page { padding-top: 1.5em; padding-bottom: 0; }
+.page-template-template-homepage .entry-content { max-width: none; text-align: left; font-size: 1em; }
+.page-template-template-homepage:not(.has-post-thumbnail) .site-main { padding-top: 0; }
+
+.page-template-template-homepage .entry-content .wp-block-cover,
+.page-template-template-homepage .laukku-hero {
+	border-radius: var(--lk-radius);
+	overflow: hidden;
+}
+.laukku-hero {
+	padding: clamp(2rem, 6vw, 4.5rem) clamp(1.25rem, 5vw, 4rem);
+	margin-bottom: 2.5em;
+	color: #fff;
+	background:
+		radial-gradient(circle at 85% 20%, rgba(253, 186, 116, .35), transparent 40%),
+		linear-gradient(135deg, var(--lk-navy) 0%, var(--lk-navy-2) 100%);
+}
+.laukku-hero h1,
+.laukku-hero h2 { color: #fff; margin: 0 0 .4em; font-size: clamp(1.75rem, 4.5vw, 2.75rem); line-height: 1.1; max-width: 18em; }
+.laukku-hero p { max-width: 36em; font-size: 1.1rem; color: #dbe6ee; }
+.laukku-hero .button { margin: .5em .5em 0 0; }
+.laukku-hero .button.is-ghost { background: transparent !important; border: 2px solid #fff; color: #fff !important; }
+
+.storefront-product-section .section-title {
+	text-align: left;
+	font-size: 1.5rem;
+	margin-bottom: 1em;
+}
+.storefront-product-categories ul.products li.product { text-align: center; }
+.storefront-product-categories ul.products li.product .woocommerce-loop-category__title { font-size: 1rem; color: var(--lk-navy); }
+
+.laukku-teaser {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1em 2em;
+	margin: 0 0 3em;
+	padding: 1.75em 2em;
+	border-radius: var(--lk-radius);
+	background: #fff7ed;
+	border: 1px solid #fed7aa;
+}
+.laukku-teaser h2 { margin: 0 0 .25em; font-size: 1.35rem; }
+.laukku-teaser p { margin: 0; }
+
+/* --------------------------------------------------------------------------
+   Footer
+   ----------------------------------------------------------------------- */
+.site-footer { padding-top: 2.5em; font-size: .9rem; }
+.laukku-footer-store {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+	gap: 1.5em 2em;
+	padding: 1.5em 0 2em;
+	border-bottom: 1px solid rgba(255, 255, 255, .12);
+}
+.laukku-footer-store__title { font-size: 1rem; margin: 0 0 .5em; color: #fff; }
+.laukku-footer-store address { font-style: normal; }
+.laukku-hours { margin: 0; }
+.laukku-hours div { display: flex; justify-content: space-between; max-width: 14em; }
+.laukku-hours dt { font-weight: 600; }
+.laukku-hours dd { margin: 0; }
+.site-footer .site-info { padding: 1.5em 0; }
+
+/* Storefront's mobile footer bar: keep it above the content edge */
+.storefront-handheld-footer-bar { box-shadow: 0 -2px 10px rgba(0, 0, 0, .08); }
+
+@media (prefers-reduced-motion: reduce) {
+	* { transition: none !important; }
+}

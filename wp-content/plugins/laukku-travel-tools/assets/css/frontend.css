@@ -1,0 +1,110 @@
+/* Laukku Travel Tools – minimal, theme-agnostic styles.
+   Colours come from CSS custom properties so any theme can restyle them. */
+
+:root {
+	--laukku-accent: #e8590c;
+	--laukku-ok: #1a7f37;
+	--laukku-no: #b42318;
+	--laukku-surface: #f6f7f9;
+	--laukku-border: #dfe3e8;
+	--laukku-radius: 10px;
+}
+
+/* Spec line on product cards */
+.laukku-card-specs {
+	margin: .25em 0 .5em;
+	font-size: .8125rem;
+	color: #57606a;
+}
+
+/* Cabin badge on product cards */
+ul.products li.product { position: relative; }
+.laukku-badge {
+	position: absolute;
+	top: .6em;
+	left: .6em;
+	z-index: 2;
+	padding: .2em .6em;
+	border-radius: 999px;
+	font-size: .75rem;
+	font-weight: 600;
+	line-height: 1.6;
+	background: #fff;
+	color: #0b3954;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
+}
+.laukku-badge--cabin::before { content: "✈ "; }
+/* Narrow cards: icon-only badge (text stays for screen readers). */
+@media (max-width: 767px) {
+	.laukku-badge--cabin { padding: .2em .5em; }
+	.laukku-badge--cabin::before { content: "✈"; }
+	.laukku-badge--cabin .laukku-badge__text {
+		position: absolute; width: 1px; height: 1px; overflow: hidden;
+		clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+	}
+}
+
+/* Single product: will it fit? */
+.laukku-cabin {
+	margin: 1.25em 0;
+	border: 1px solid var(--laukku-border);
+	border-radius: var(--laukku-radius);
+	background: var(--laukku-surface);
+}
+.laukku-cabin__summary {
+	padding: .8em 1em;
+	cursor: pointer;
+	font-weight: 600;
+	list-style-position: inside;
+}
+.laukku-cabin__icon { margin-right: .35em; }
+.laukku-cabin__body { padding: 0 1em 1em; }
+.laukku-cabin__dims { margin: 0 0 .5em; font-size: .875rem; }
+.laukku-cabin__table { width: 100%; margin: 0 0 .75em; font-size: .875rem; border-collapse: collapse; background: #fff; }
+.laukku-cabin__table th,
+.laukku-cabin__table td { padding: .45em .6em; border-bottom: 1px solid var(--laukku-border); text-align: left; }
+.laukku-cabin__table tbody th { font-weight: 600; }
+.laukku-cabin__table small { display: block; font-weight: 400; color: #57606a; }
+.laukku-cabin__table .is-fit td:last-child { color: var(--laukku-ok); font-weight: 600; }
+.laukku-cabin__table .is-nofit td:last-child { color: var(--laukku-no); }
+.laukku-cabin__note { margin: 0; font-size: .8125rem; color: #57606a; }
+
+/* Free shipping bar */
+.laukku-ship-bar {
+	margin: 0 0 1.25em;
+	padding: .8em 1em;
+	border-radius: var(--laukku-radius);
+	background: var(--laukku-surface);
+	border: 1px solid var(--laukku-border);
+}
+.laukku-ship-bar__msg { margin: 0 0 .5em; font-size: .9375rem; }
+.laukku-ship-bar__track { height: 8px; border-radius: 999px; background: var(--laukku-border); overflow: hidden; }
+.laukku-ship-bar__fill { display: block; height: 100%; border-radius: inherit; background: var(--laukku-accent); transition: width .4s ease; }
+.laukku-ship-bar.is-complete .laukku-ship-bar__fill { background: var(--laukku-ok); }
+.widget_shopping_cart .laukku-ship-bar { margin: .75em 0; font-size: .875rem; }
+
+/* Finder */
+.laukku-finder__form {
+	display: grid;
+	gap: 1em;
+	padding: 1.5em;
+	margin-bottom: 2em;
+	border-radius: var(--laukku-radius);
+	background: var(--laukku-surface);
+	border: 1px solid var(--laukku-border);
+}
+.laukku-finder__title { margin: 0; }
+.laukku-finder__row label,
+.laukku-finder__custom label span { display: block; font-weight: 600; margin-bottom: .25em; }
+.laukku-finder__row select { width: 100%; max-width: 32em; }
+.laukku-finder__custom { display: flex; flex-wrap: wrap; gap: 1em; margin: 0; padding: 0; border: 0; background: none; }
+.laukku-finder__custom legend { margin: 0 0 .5em; padding: 0; font-weight: 600; }
+.laukku-finder .laukku-finder__row select,
+.laukku-finder .laukku-finder__custom input { padding: .55em .7em; border: 1px solid var(--laukku-border); border-radius: 8px; background: #fff; box-shadow: none; font-size: 1rem; }
+.laukku-finder__custom input { width: 7em; }
+.laukku-finder__form .button { justify-self: start; }
+.laukku-finder__heading .count { color: #57606a; font-weight: 400; }
+
+@media (prefers-reduced-motion: reduce) {
+	.laukku-ship-bar__fill { transition: none; }
+}

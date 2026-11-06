@@ -1,0 +1,14 @@
+/*
+Theme Name:   Laukku Storefront Child
+Theme URI:    https://laukkumatka.fi
+Description:  Child theme of Storefront for a Finnish bag & luggage store. Mobile-first product cards, trust signals, clearer product pages and accessibility fixes – all through hooks, without copying parent templates, so Storefront updates stay safe.
+Author:       Oba Oriekwo
+Template:     storefront
+Version:      1.0.0
+Requires at least: 6.4
+Requires PHP: 8.0
+License:      GPL-2.0-or-later
+Text Domain:  laukku-child
+*/
+
+/* All styles live in assets/css/main.css (loaded after Storefront). */
