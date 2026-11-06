@@ -2,7 +2,7 @@
 #   docker compose up -d
 #   docker compose run --rm cli bash /project/bin/setup.sh
 # Shop: http://localhost:8080   Admin: http://localhost:8080/wp-admin (admin / admin)
-# phpMyAdmin is not included on purpose – use `docker compose run --rm cli wp db query`.
+# Also works in GitHub Codespaces (the public address is detected automatically).
 
 services:
   db:
@@ -34,20 +34,27 @@ services:
       WORDPRESS_DB_PASSWORD: wordpress
       WORDPRESS_DB_NAME: wordpress
       WORDPRESS_DEBUG: "1"
+      CODESPACE_NAME: ${CODESPACE_NAME:-}
+      GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN: ${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN:-}
+      # Note: "$$" is how docker-compose writes a literal "$" for PHP.
       WORDPRESS_CONFIG_EXTRA: |
         define( 'WP_DEBUG_LOG', true );
         define( 'WP_DEBUG_DISPLAY', false );
         define( 'WP_ENVIRONMENT_TYPE', 'local' );
+        if ( getenv( 'CODESPACE_NAME' ) && getenv( 'GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN' ) ) {
+          $$laukku_host = getenv( 'CODESPACE_NAME' ) . '-8080.' . getenv( 'GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN' );
+          $$_SERVER['HTTP_HOST'] = $$laukku_host;
+          $$_SERVER['HTTPS'] = 'on';
+          define( 'WP_HOME', 'https://' . $$laukku_host );
+          define( 'WP_SITEURL', 'https://' . $$laukku_host );
+        }
     volumes:
       - wp_data:/var/www/html
-      # Our code is mounted live – edit files, refresh the browser.
       - ./wp-content/themes/laukku-storefront-child:/var/www/html/wp-content/themes/laukku-storefront-child
       - ./wp-content/plugins/laukku-travel-tools:/var/www/html/wp-content/plugins/laukku-travel-tools
 
   cli:
     image: wordpress:cli-php8.3
-    # The CLI image runs as uid 82 by default; match Apache's www-data (33)
-    # so files it creates are writable by WordPress.
     user: "33:33"
     depends_on:
       - wordpress
@@ -57,6 +64,8 @@ services:
       WORDPRESS_DB_PASSWORD: wordpress
       WORDPRESS_DB_NAME: wordpress
       HOME: /tmp
+      CODESPACE_NAME: ${CODESPACE_NAME:-}
+      GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN: ${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN:-}
     volumes:
       - wp_data:/var/www/html
       - ./wp-content/themes/laukku-storefront-child:/var/www/html/wp-content/themes/laukku-storefront-child
