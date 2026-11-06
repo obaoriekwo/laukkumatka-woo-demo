@@ -1,0 +1,118 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Laukku WooCommerce demo store",
+		"description": "Unofficial demo luggage store: Storefront child theme + Laukku Travel Tools plugin (cabin-size checker, free-shipping bar, store audit).",
+		"author": "obaoriekwo",
+		"categories": [ "WooCommerce", "Demo" ]
+	},
+	"landingPage": "/",
+	"preferredVersions": {
+		"php": "8.3",
+		"wp": "latest"
+	},
+	"features": {
+		"networking": true
+	},
+	"login": true,
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "woocommerce"
+			},
+			"options": {
+				"activate": true
+			},
+			"progress": {
+				"caption": "Installing WooCommerce…"
+			}
+		},
+		{
+			"step": "installTheme",
+			"themeData": {
+				"resource": "wordpress.org/themes",
+				"slug": "storefront"
+			},
+			"options": {
+				"activate": false
+			},
+			"progress": {
+				"caption": "Installing Storefront…"
+			}
+		},
+		{
+			"step": "writeFiles",
+			"writeToPath": "/wordpress/wp-content/themes/laukku-storefront-child",
+			"filesTree": {
+				"resource": "git:directory",
+				"url": "https://github.com/obaoriekwo/laukkumatka-woo-demo",
+				"ref": "main",
+				"refType": "branch",
+				"path": "wp-content/themes/laukku-storefront-child"
+			},
+			"progress": {
+				"caption": "Downloading the Laukku theme from GitHub…"
+			}
+		},
+		{
+			"step": "writeFiles",
+			"writeToPath": "/wordpress/wp-content/plugins/laukku-travel-tools",
+			"filesTree": {
+				"resource": "git:directory",
+				"url": "https://github.com/obaoriekwo/laukkumatka-woo-demo",
+				"ref": "main",
+				"refType": "branch",
+				"path": "wp-content/plugins/laukku-travel-tools"
+			},
+			"progress": {
+				"caption": "Downloading the Laukku plugin from GitHub…"
+			}
+		},
+		{
+			"step": "writeFiles",
+			"writeToPath": "/wordpress/laukku-demo/bin",
+			"filesTree": {
+				"resource": "git:directory",
+				"url": "https://github.com/obaoriekwo/laukkumatka-woo-demo",
+				"ref": "main",
+				"refType": "branch",
+				"path": "bin"
+			}
+		},
+		{
+			"step": "writeFiles",
+			"writeToPath": "/wordpress/laukku-demo/sample-data",
+			"filesTree": {
+				"resource": "git:directory",
+				"url": "https://github.com/obaoriekwo/laukkumatka-woo-demo",
+				"ref": "main",
+				"refType": "branch",
+				"path": "sample-data"
+			},
+			"progress": {
+				"caption": "Downloading sample products…"
+			}
+		},
+		{
+			"step": "activateTheme",
+			"themeFolderName": "laukku-storefront-child"
+		},
+		{
+			"step": "activatePlugin",
+			"pluginPath": "laukku-travel-tools/laukku-travel-tools.php"
+		},
+		{
+			"step": "setSiteLanguage",
+			"language": "fi"
+		},
+		{
+			"step": "wp-cli",
+			"command": "wp eval-file /wordpress/laukku-demo/bin/setup-store.php /wordpress/laukku-demo/sample-data",
+			"progress": {
+				"caption": "Setting up the demo store…"
+			}
+		}
+	]
+}

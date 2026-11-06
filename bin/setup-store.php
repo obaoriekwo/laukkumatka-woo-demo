@@ -57,6 +57,8 @@ $options = array(
 	'woocommerce_task_list_hidden'             => 'yes',
 	'woocommerce_show_marketplace_suggestions' => 'no',
 	'permalink_structure'                      => '/%postname%/',
+	'blog_public'                              => '0',   // Demo: ask search engines not to index it.
+	'laukku_demo_notice'                       => 'yes', // Show the "unofficial demo" banner.
 	'woocommerce_permalinks'                   => array(
 		'product_base'  => '/tuote',
 		'category_base' => 'tuoteosasto',
@@ -305,6 +307,11 @@ foreach ( $cat_ids as $slug => $term_id ) {
  * 5. Pages: homepage, cabin finder, menu
  * ---------------------------------------------------------------------- */
 WP_CLI::log( '→ Pages and menu' );
+
+// Make sure the WooCommerce pages (shop, cart, checkout, my account) exist.
+if ( wc_get_page_id( 'shop' ) <= 0 || wc_get_page_id( 'cart' ) <= 0 ) {
+	WC_Install::create_pages();
+}
 $upsert_page = static function ( string $slug, string $title, string $content, string $template = '' ): int {
 	$page = get_page_by_path( $slug );
 	$args = array(
@@ -401,6 +408,10 @@ if ( function_exists( 'wc_update_product_lookup_tables' ) ) {
 	wc_update_product_lookup_tables();
 }
 wc_delete_product_transients();
-flush_rewrite_rules();
+// The product/category URL bases changed above, but WooCommerce registered its
+// taxonomies with the old bases at the start of this request. Deleting the
+// cached rules makes WordPress rebuild them – with the new bases – on the next
+// page load (flush_rewrite_rules() here would rebuild them with the old ones).
+delete_option( 'rewrite_rules' );
 
 WP_CLI::success( 'Demo store ready. Try: wp laukku audit' );

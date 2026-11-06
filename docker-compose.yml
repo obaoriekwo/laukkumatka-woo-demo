@@ -50,11 +50,13 @@ services:
         }
     volumes:
       - wp_data:/var/www/html
+      # Our code is mounted live – edit files, refresh the browser.
       - ./wp-content/themes/laukku-storefront-child:/var/www/html/wp-content/themes/laukku-storefront-child
       - ./wp-content/plugins/laukku-travel-tools:/var/www/html/wp-content/plugins/laukku-travel-tools
 
   cli:
     image: wordpress:cli-php8.3
+    # The CLI image runs as uid 82 by default; match Apache's www-data (33).
     user: "33:33"
     depends_on:
       - wordpress

@@ -28,58 +28,58 @@ msgstr ""
 msgid "Oba Oriekwo"
 msgstr ""
 
-#: includes/class-cabin-checker.php:60
+#: includes/class-cabin-checker.php:105
 msgid "under-seat bag (free)"
 msgstr "istuimen alle (ilmainen)"
 
-#: includes/class-cabin-checker.php:61
+#: includes/class-cabin-checker.php:106
 msgid "cabin bag"
 msgstr "käsimatkatavara"
 
-#: includes/class-cabin-checker.php:161
+#: includes/class-cabin-checker.php:206
 msgid "Cabin size"
 msgstr "Käsimatkatavarakoko"
 
 #. translators: %s: comma separated airline names.
-#: includes/class-cabin-checker.php:194
+#: includes/class-cabin-checker.php:239
 msgid "Fits as cabin bag: %s"
 msgstr "Sopii käsimatkatavaraksi: %s"
 
-#: includes/class-cabin-checker.php:197
+#: includes/class-cabin-checker.php:242
 msgid "Check-in size – too big for most cabin limits"
 msgstr "Ruumakoko – liian suuri useimpiin käsimatkatavararajoihin"
 
 #. translators: %s: bag dimensions.
-#: includes/class-cabin-checker.php:204
+#: includes/class-cabin-checker.php:249
 msgid "Bag size: %s (incl. wheels and handles)"
 msgstr "Laukun koko: %s (sis. pyörät ja kahvat)"
 
-#: includes/class-cabin-checker.php:208
+#: includes/class-cabin-checker.php:253
 msgid "Airline hand-luggage size limits compared with this bag"
 msgstr ""
 "Lentoyhtiöiden käsimatkatavaroiden kokorajat verrattuna tähän laukkuun"
 
-#: includes/class-cabin-checker.php:211
+#: includes/class-cabin-checker.php:256
 msgid "Airline"
 msgstr "Lentoyhtiö"
 
-#: includes/class-cabin-checker.php:212
+#: includes/class-cabin-checker.php:257
 msgid "Limit"
 msgstr "Raja"
 
-#: includes/class-cabin-checker.php:213
+#: includes/class-cabin-checker.php:258
 msgid "Fits?"
 msgstr "Sopiiko?"
 
-#: includes/class-cabin-checker.php:224
+#: includes/class-cabin-checker.php:269
 msgid "Yes"
 msgstr "Kyllä"
 
-#: includes/class-cabin-checker.php:226
+#: includes/class-cabin-checker.php:271
 msgid "No"
 msgstr "Ei"
 
-#: includes/class-cabin-checker.php:234
+#: includes/class-cabin-checker.php:279
 msgid ""
 "Airlines change their rules and fares differ – always confirm with your "
 "airline before flying."
@@ -87,53 +87,53 @@ msgstr ""
 "Lentoyhtiöiden säännöt muuttuvat ja lipputyypit eroavat – tarkista aina "
 "omalta lentoyhtiöltäsi ennen matkaa."
 
-#: includes/class-cabin-checker.php:236
+#: includes/class-cabin-checker.php:281
 msgid "Find more bags that fit"
 msgstr "Etsi lisää sopivia laukkuja"
 
-#: includes/class-cabin-checker.php:275
+#: includes/class-cabin-checker.php:302 includes/class-cabin-checker.php:323
 msgid "Will it fit on the plane?"
 msgstr "Sopiiko laukku koneeseen?"
 
-#: includes/class-cabin-checker.php:277
+#: includes/class-cabin-checker.php:325
 msgid "Choose airline and ticket type"
 msgstr "Valitse lentoyhtiö ja lipputyyppi"
 
-#: includes/class-cabin-checker.php:279
+#: includes/class-cabin-checker.php:327
 msgid "— Select —"
 msgstr "— Valitse —"
 
-#: includes/class-cabin-checker.php:288
+#: includes/class-cabin-checker.php:336
 msgid "…or enter your own size limit (cm)"
 msgstr "…tai syötä oma kokoraja (cm)"
 
-#: includes/class-cabin-checker.php:291
+#: includes/class-cabin-checker.php:339
 msgid "Length"
 msgstr "Pituus"
 
-#: includes/class-cabin-checker.php:292
+#: includes/class-cabin-checker.php:340
 msgid "Width"
 msgstr "Leveys"
 
-#: includes/class-cabin-checker.php:293
+#: includes/class-cabin-checker.php:341
 msgid "Height"
 msgstr "Korkeus"
 
-#: includes/class-cabin-checker.php:303
+#: includes/class-cabin-checker.php:351
 msgid "Show bags that fit"
 msgstr "Näytä sopivat laukut"
 
 #. translators: %s: dimensions.
-#: includes/class-cabin-checker.php:321
+#: includes/class-cabin-checker.php:369
 msgid "Bags that fit inside %s"
 msgstr "Laukut, jotka mahtuvat mittoihin %s"
 
 #. translators: 1: airline name, 2: bag type.
-#: includes/class-cabin-checker.php:340
+#: includes/class-cabin-checker.php:388
 msgid "Bags that fit %1$s as %2$s"
 msgstr "Laukut, jotka sopivat: %1$s, %2$s"
 
-#: includes/class-cabin-checker.php:346
+#: includes/class-cabin-checker.php:394
 msgid ""
 "No bags found for that size. Try a larger limit or a different ticket type."
 msgstr ""
@@ -444,6 +444,6 @@ msgid "Laukku Travel Tools requires WooCommerce to be installed and active."
 msgstr ""
 "Laukku Travel Tools vaatii, että WooCommerce on asennettu ja käytössä."
 
-#: laukku-travel-tools.php:106
+#: laukku-travel-tools.php:99
 msgid "Settings"
 msgstr "Asetukset"

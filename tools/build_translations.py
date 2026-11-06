@@ -134,6 +134,7 @@ FI = {
     "Delivered in 1–3 working days": "Toimitus 1–3 arkipäivässä",
     "Pick up and try at our Jyväskylä shop": "Nouda ja sovita myymälässämme Jyväskylässä",
     "Specifications": "Tekniset tiedot",
+    "Unofficial demo store made for a job application – not a real shop. Orders are not delivered and nothing is charged.": "Epävirallinen demokauppa työhakemusta varten – ei oikea verkkokauppa. Tilauksia ei toimiteta eikä mitään veloiteta.",
 }
 
 TARGETS = [

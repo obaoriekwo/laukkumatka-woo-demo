@@ -90,19 +90,27 @@ msgstr "14 päivän palautusoikeus"
 msgid "Visit our shop in Seppälä, Jyväskylä"
 msgstr "Myymälä Jyväskylän Seppälässä"
 
-#: inc/layout.php:64
+#: inc/layout.php:58
+msgid ""
+"Unofficial demo store made for a job application – not a real shop. Orders "
+"are not delivered and nothing is charged."
+msgstr ""
+"Epävirallinen demokauppa työhakemusta varten – ei oikea verkkokauppa. "
+"Tilauksia ei toimiteta eikä mitään veloiteta."
+
+#: inc/layout.php:80
 msgid "Visit the shop"
 msgstr "Tervetuloa myymälään"
 
-#: inc/layout.php:71
+#: inc/layout.php:87
 msgid "Opening hours"
 msgstr "Aukioloajat"
 
-#: inc/layout.php:79
+#: inc/layout.php:95
 msgid "Online shop"
 msgstr "Verkkokauppa"
 
-#: inc/layout.php:80
+#: inc/layout.php:96
 msgid "Open 24/7. Orders ship from our Jyväskylä warehouse."
 msgstr "Avoinna 24/7. Tilaukset lähtevät Jyväskylän varastoltamme."
 

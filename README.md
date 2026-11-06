@@ -3,7 +3,13 @@
 A WordPress/WooCommerce project I built to prepare for the work trial at **Triptek Ky / laukkumatka.fi**.
 It is a small, working luggage store with the kinds of front-end, usability and SEO improvements I would like to bring to the real shop.
 
-> Demo only: brands, products and prices are made up. Store details (address, opening hours, business ID) are copied from the public laukkumatka.fi footer.
+> Demo only: brands, products and prices are made up. Store details (address, opening hours, business ID) are copied from the public laukkumatka.fi footer. This is an unofficial project, not affiliated with the store.
+
+## ▶ Live demo
+
+**[Open the live demo store](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/obaoriekwo/laukkumatka-woo-demo/main/blueprint.json)** (runs in your browser with WordPress Playground; the first load takes about a minute)
+
+You are logged in as admin automatically, so you can look at the shop and the admin. Each visitor gets a fresh copy, and nothing is saved. The setup is defined in [`blueprint.json`](blueprint.json).
 
 ![Homepage](docs/screenshots/01-home-desktop.jpg)
 
@@ -85,7 +91,7 @@ wp laukku fits 55x40x23               # quick check from the terminal
 All strings are written in English in the code and translated to Finnish (`.po`/`.mo`) with the standard WordPress workflow:
 `wp i18n make-pot` → `tools/build_translations.py`. The store runs in Finnish, and the code is ready for other languages.
 
-## Run it locally
+## Run it locally (Docker)
 
 Requirements: Docker Desktop.
 
@@ -118,6 +124,7 @@ The theme and plugin folders are mounted into the container, so you can edit fil
 ├── bin/
 │   ├── setup.sh               # one-command setup (WP-CLI)
 │   └── setup-store.php        # Finnish store config + sample data
+├── blueprint.json             # live demo in WordPress Playground
 ├── docker-compose.yml
 ├── docs/
 │   ├── STORE-AUDIT.md         # review of the live laukkumatka.fi

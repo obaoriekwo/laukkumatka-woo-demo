@@ -44,6 +44,22 @@ add_action(
 	5
 );
 
+/**
+ * "This is a demo" banner, switched on by the setup script (option
+ * laukku_demo_notice). Makes it impossible to mistake the demo for the real
+ * shop when it is shown publicly.
+ */
+add_action(
+	'storefront_before_header',
+	static function () {
+		if ( 'yes' !== get_option( 'laukku_demo_notice', 'no' ) ) {
+			return;
+		}
+		echo '<div class="laukku-demo-notice" role="note">' . esc_html__( 'Unofficial demo store made for a job application – not a real shop. Orders are not delivered and nothing is charged.', 'laukku-child' ) . '</div>';
+	},
+	1
+);
+
 /** Storefront loads Google Fonts – we use a system font stack instead. */
 add_action(
 	'wp_enqueue_scripts',

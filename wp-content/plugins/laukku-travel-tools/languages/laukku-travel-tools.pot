@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-06T04:07:20+00:00\n"
+"POT-Creation-Date: 2026-11-06T11:30:04+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: laukku-travel-tools\n"
@@ -29,111 +29,112 @@ msgstr ""
 msgid "Oba Oriekwo"
 msgstr ""
 
-#: includes/class-cabin-checker.php:60
+#: includes/class-cabin-checker.php:105
 msgid "under-seat bag (free)"
 msgstr ""
 
-#: includes/class-cabin-checker.php:61
+#: includes/class-cabin-checker.php:106
 msgid "cabin bag"
 msgstr ""
 
-#: includes/class-cabin-checker.php:161
+#: includes/class-cabin-checker.php:206
 msgid "Cabin size"
 msgstr ""
 
 #. translators: %s: comma separated airline names.
-#: includes/class-cabin-checker.php:194
+#: includes/class-cabin-checker.php:239
 #, php-format
 msgid "Fits as cabin bag: %s"
 msgstr ""
 
-#: includes/class-cabin-checker.php:197
+#: includes/class-cabin-checker.php:242
 msgid "Check-in size – too big for most cabin limits"
 msgstr ""
 
 #. translators: %s: bag dimensions.
-#: includes/class-cabin-checker.php:204
+#: includes/class-cabin-checker.php:249
 #, php-format
 msgid "Bag size: %s (incl. wheels and handles)"
 msgstr ""
 
-#: includes/class-cabin-checker.php:208
+#: includes/class-cabin-checker.php:253
 msgid "Airline hand-luggage size limits compared with this bag"
 msgstr ""
 
-#: includes/class-cabin-checker.php:211
+#: includes/class-cabin-checker.php:256
 msgid "Airline"
 msgstr ""
 
-#: includes/class-cabin-checker.php:212
+#: includes/class-cabin-checker.php:257
 msgid "Limit"
 msgstr ""
 
-#: includes/class-cabin-checker.php:213
+#: includes/class-cabin-checker.php:258
 msgid "Fits?"
 msgstr ""
 
-#: includes/class-cabin-checker.php:224
+#: includes/class-cabin-checker.php:269
 msgid "Yes"
 msgstr ""
 
-#: includes/class-cabin-checker.php:226
+#: includes/class-cabin-checker.php:271
 msgid "No"
 msgstr ""
 
-#: includes/class-cabin-checker.php:234
+#: includes/class-cabin-checker.php:279
 msgid "Airlines change their rules and fares differ – always confirm with your airline before flying."
 msgstr ""
 
-#: includes/class-cabin-checker.php:236
+#: includes/class-cabin-checker.php:281
 msgid "Find more bags that fit"
 msgstr ""
 
-#: includes/class-cabin-checker.php:275
+#: includes/class-cabin-checker.php:302
+#: includes/class-cabin-checker.php:323
 msgid "Will it fit on the plane?"
 msgstr ""
 
-#: includes/class-cabin-checker.php:277
+#: includes/class-cabin-checker.php:325
 msgid "Choose airline and ticket type"
 msgstr ""
 
-#: includes/class-cabin-checker.php:279
+#: includes/class-cabin-checker.php:327
 msgid "— Select —"
 msgstr ""
 
-#: includes/class-cabin-checker.php:288
+#: includes/class-cabin-checker.php:336
 msgid "…or enter your own size limit (cm)"
 msgstr ""
 
-#: includes/class-cabin-checker.php:291
+#: includes/class-cabin-checker.php:339
 msgid "Length"
 msgstr ""
 
-#: includes/class-cabin-checker.php:292
+#: includes/class-cabin-checker.php:340
 msgid "Width"
 msgstr ""
 
-#: includes/class-cabin-checker.php:293
+#: includes/class-cabin-checker.php:341
 msgid "Height"
 msgstr ""
 
-#: includes/class-cabin-checker.php:303
+#: includes/class-cabin-checker.php:351
 msgid "Show bags that fit"
 msgstr ""
 
 #. translators: %s: dimensions.
-#: includes/class-cabin-checker.php:321
+#: includes/class-cabin-checker.php:369
 #, php-format
 msgid "Bags that fit inside %s"
 msgstr ""
 
 #. translators: 1: airline name, 2: bag type.
-#: includes/class-cabin-checker.php:340
+#: includes/class-cabin-checker.php:388
 #, php-format
 msgid "Bags that fit %1$s as %2$s"
 msgstr ""
 
-#: includes/class-cabin-checker.php:346
+#: includes/class-cabin-checker.php:394
 msgid "No bags found for that size. Try a larger limit or a different ticket type."
 msgstr ""
 
@@ -428,6 +429,6 @@ msgstr ""
 msgid "Laukku Travel Tools requires WooCommerce to be installed and active."
 msgstr ""
 
-#: laukku-travel-tools.php:106
+#: laukku-travel-tools.php:99
 msgid "Settings"
 msgstr ""

@@ -6,7 +6,12 @@
 set -euo pipefail
 
 PROJECT="${1:-/project}"
-URL="${WP_URL:-http://localhost:8080}"
+if [ -n "${CODESPACE_NAME:-}" ] && [ -n "${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN:-}" ]; then
+  DEFAULT_URL="https://${CODESPACE_NAME}-8080.${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}"
+else
+  DEFAULT_URL="http://localhost:8080"
+fi
+URL="${WP_URL:-$DEFAULT_URL}"
 
 echo "⏳ Waiting for WordPress files…"
 for _ in $(seq 1 30); do [ -f wp-includes/version.php ] && break; sleep 2; done
